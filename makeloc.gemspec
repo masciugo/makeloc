@@ -21,10 +21,23 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
+    "README.md",
     "Rakefile",
     "VERSION",
-    "lib/makeloc.rb"
+    "lib/makeloc.rb",
+    "lib/makeloc/core_extensions.rb",
+    "lib/makeloc/generators/do/USAGE",
+    "lib/makeloc/generators/do/do_generator.rb",
+    "lib/makeloc/railtie.rb",
+    "makeloc.gemspec",
+    "spec/generators/test_generator_spec.rb",
+    "spec/generators/tmp/test.en.yml",
+    "spec/generators/tmp/test.en.yml.bk",
+    "spec/generators/tmp/test.it.yml",
+    "spec/generators/tmp/test_incomplete.en.yml.bk",
+    "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/masciugo/makeloc"
   s.licenses = ["MIT"]
