@@ -22,7 +22,6 @@ Jeweler::Tasks.new do |gem|
   gem.email = "masciugo@gmail.com"
   gem.authors = ["masciugo"]
   # dependencies defined in Gemfile
-  gem.add_dependency 'rails'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
