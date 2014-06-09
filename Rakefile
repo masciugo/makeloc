@@ -17,28 +17,34 @@ Jeweler::Tasks.new do |gem|
   gem.name = "makeloc"
   gem.homepage = "http://github.com/masciugo/makeloc"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A generator to updates, or creates if not exists, the locale file for the provided target language}
+  gem.description = %Q{}
   gem.email = "masciugo@gmail.com"
   gem.authors = ["masciugo"]
   # dependencies defined in Gemfile
+  gem.add_dependency 'rails'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
-require 'rake/testtask'
-Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
+require 'rspec/core'
+require 'rspec/core/rake_task'
+# RSpec::Core::RakeTask.new(:spec) do |spec|
+#   spec.pattern = FileList['spec/**/*_spec.rb']
+# end
+
+RSpec::Core::RakeTask.new(:spec, :tag) do |t, task_args|
+  t.rspec_opts = "--format documentation --color"
+  t.rspec_opts += " --tag #{task_args[:tag]}" unless (task_args.nil? or task_args[:tag].nil?) #questo non va
 end
+
 
 desc "Code coverage detail"
 task :simplecov do
   ENV['COVERAGE'] = "true"
-  Rake::Task['test'].execute
+  Rake::Task['spec'].execute
 end
 
-task :default => :test
+task :default => :spec
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|

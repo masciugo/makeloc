@@ -1,0 +1,8 @@
+Description:
+    A little generator to tidy locale file contents for Ruby On Rails
+
+Example:
+    rails g makeloc:do it config/locales/activerecord.en.yml
+
+    This will create:
+        config/locales/activerecord.it.yml
