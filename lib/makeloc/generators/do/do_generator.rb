@@ -2,7 +2,7 @@ require 'rails/generators'
 
 module Makeloc
   class DoGenerator < Rails::Generators::Base
-    desc "This generator updates, or creates if not exists, the locale file for the provided target language"
+    desc "Updates, or creates if not exists, the locale file for the provided target language"
 
     argument :target_lang, :type => :string 
     argument :source_file, :type => :string 

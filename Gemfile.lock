@@ -147,10 +147,10 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.0)
-  byebug
-  genspec
-  jeweler (~> 2.0.1)
-  rails
+  byebug (~> 3.1)
+  genspec (~> 0.2)
+  jeweler (~> 2.0)
+  rails (~> 4.0, >= 2.2)
   rdoc (~> 3.12)
   rspec (~> 2.8.0)
   simplecov
