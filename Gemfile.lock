@@ -150,7 +150,7 @@ DEPENDENCIES
   byebug (~> 3.1)
   genspec (~> 0.2)
   jeweler (~> 2.0)
-  rails (>= 2.2)
+  rails
   rdoc (~> 3.12)
   rspec (~> 2.8)
   simplecov
