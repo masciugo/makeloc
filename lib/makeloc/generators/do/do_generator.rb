@@ -26,7 +26,7 @@ module Makeloc
         target_data.deep_merge!(existing_target_data) if existing_target_data
       end
       
-      create_file(target_fp){ {target_lang => target_data}.to_yaml }
+      create_file(target_fp){ {target_lang => target_data}.to_yaml(:line_width => -1) } # line_width => -1 to disable indentation
 
     end
   
