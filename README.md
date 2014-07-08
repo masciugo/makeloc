@@ -1,5 +1,5 @@
 # Makeloc
-A little generator to tidy locale files along with their contents for Ruby On Rails
+A little generator to tidy locale files along with their content for Ruby On Rails
 
 ## Idea
 Makeloc comes from the necessity to update or create locale files while developing Ruby on Rails application. Often there is a reference language which get manually updated whenever necessary and later all the other locales should follow the same update steps. This last part could be very tedious and prone to errors or missings. 
