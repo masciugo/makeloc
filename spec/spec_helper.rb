@@ -38,5 +38,5 @@ REF_LANG = 'it'
 REF_LANG_FP = Pathname.new(File.join(TMP_FOLDER,"test.#{REF_LANG}.yml"))
 TARGET_LANG_FP = Pathname.new(File.join(TMP_FOLDER,"test.#{TARGET_LANG}.yml"))
 
-TARGET_LANG_BK_FP = Pathname.new(File.join(TMP_FOLDER,"test.#{TARGET_LANG}.yml.bk"))
-TARGET_INCOMPLETE_BK_FP = Pathname.new(File.join(TMP_FOLDER,"test_incomplete.#{TARGET_LANG}.yml.bk"))
+TARGET_LANG_ORIGINAL_FP = Pathname.new(File.join(TMP_FOLDER,"test.#{TARGET_LANG}.yml.original"))
+TARGET_INCOMPLETE_ORIGINAL_FP = Pathname.new(File.join(TMP_FOLDER,"test_incomplete.#{TARGET_LANG}.yml.original"))

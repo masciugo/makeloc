@@ -6,6 +6,7 @@ module Makeloc
 
     argument :target_lang, :type => :string 
     argument :source_file, :type => :string 
+    class_option :strict, :type => :boolean 
 
     def do
       ref_locale_fp = Pathname.new(source_file)
@@ -23,7 +24,12 @@ module Makeloc
       # updating target data with original values if they exists
       if File.exist? target_fp
         existing_target_data = YAML.load(File.open(File.expand_path(target_fp)))[target_lang]
-        target_data.deep_merge!(existing_target_data) if existing_target_data
+        
+        # delete extra keys present in original target data
+        (existing_target_data.flatten_keys - target_data.flatten_keys).each{|extra_key| existing_target_data.delete_at(extra_key)} if options[:strict]
+
+        target_data.deep_merge!(existing_target_data)
+        
       end
       
       create_file(target_fp){ {target_lang => target_data}.to_yaml(:line_width => -1) } # line_width => -1 to disable indentation

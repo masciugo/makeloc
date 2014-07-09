@@ -2,7 +2,9 @@ Description:
     A little generator to tidy locale files along with their content for Ruby On Rails
 
 Example:
-    rails g makeloc:do it config/locales/activerecord.en.yml
+    rails g makeloc:do it config/locales/activerecord.en.yml [--strict]
 
     This will create:
         config/locales/activerecord.it.yml
+        
+    with option --strict it overwrites (if already present) the generated locale file deleting its original extra translations

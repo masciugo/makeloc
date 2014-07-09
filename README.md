@@ -12,8 +12,9 @@ Makeloc, given a reference filepath (formatted as `path/to/file/context.referenc
 ## Usage
 Makeloc is a generator. The following will create, or update if it exists, the file `config/locales/activerecord.it.yml`
 
-    rails g makeloc:do it config/locales/activerecord.en.yml
+    rails g makeloc:do it config/locales/activerecord.en.yml [--strict]
 
+with option --strict it overwrites (if already present) the generated locale file deleting its original extra translations
 
 ## Test
 
