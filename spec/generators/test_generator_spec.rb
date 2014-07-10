@@ -10,7 +10,7 @@ module Makeloc
     let!(:incomplete_target_hash_with_root) { YAML.load(File.read(TARGET_INCOMPLETE_ORIGINAL_FP)) }
     let!(:incomplete_target_hash) { incomplete_target_hash_with_root[TARGET_LANG] }
 
-    EXTRA_KEYS = %w{ date.extra_key_1 date.formats.extra_key_2 }
+    EXTRA_KEYS = %w{ date.extra_key_1 date.formats.extra_key_2 date.extra_key_0.extra_key_00.extra_key_000 date.extra_key_0.extra_key_00.extra_key_001}
     MISSING_KEYS = %w{ datetime.distance_in_words.about_x_hours.other date.abbr_day_names }
 
     # loaded at runtime after each generation

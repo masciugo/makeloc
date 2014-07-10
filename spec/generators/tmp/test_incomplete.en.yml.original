@@ -1,5 +1,11 @@
 en:
   date:
+    extra_key_0:
+      extra_key_00:
+        extra_key_000: foo bar
+        extra_key_001: bar
+        extra_key_002: foo
+
     extra_key_1: foo
     # abbr_day_names:
     # - Sun
