@@ -14,7 +14,7 @@ Makeloc is a generator. The following will create, or update if it exists, the f
 
     rails g makeloc:do it config/locales/activerecord.en.yml [--strict]
 
-with option --strict it overwrites (if already present) the generated locale file deleting its original extra translations
+with option --strict, in case of update, it deletes any extra keys in the destination locale file
 
 ## Test
 
